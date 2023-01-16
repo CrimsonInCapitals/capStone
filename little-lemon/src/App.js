@@ -37,7 +37,7 @@ function App() {
               <dt>price</dt>
               <dt>description</dt>
               </dd>
-              <a href=#>Order online</a>
+              <a href="#">Order online</a>
             </article>
                 <article>
               <picture></picture>
@@ -46,7 +46,7 @@ function App() {
               <dt>price</dt>
               <dt>description</dt>
               </dd>
-              <a href=#>Order online</a>
+              <a href="#">Order online</a>
             </article>
                 <article>
               <picture></picture>
@@ -55,7 +55,7 @@ function App() {
               <dt>price</dt>
               <dt>description</dt>
               </dd>
-              <a href=#>Order online</a>
+              <a href="#">Order online</a>
             </article>
                 <article>
               <picture></picture>
@@ -64,32 +64,32 @@ function App() {
               <dt>price</dt>
               <dt>description</dt>
               </dd>
-              <a href=#>Order online</a>
+              <a href="#">Order online</a>
             </article>
         </section>
         <section role='testimonies'>
               <h1>Testimonials</h1>
                     <article>
               <div></div>
-              <picture>></picture>
+              <picture></picture>
+              <h1>Reviewer name</h1>
+              <p>comment</p>
+            </article>
+                  <article>
+              <div></div>
+              <picture></picture>
               <h1>Reviewer name</h1>
               <p>ycomment</p>
             </article>
                   <article>
               <div></div>
-              <picture>></picture>
+              <picture></picture>
               <h1>Reviewer name</h1>
               <p>ycomment</p>
             </article>
                   <article>
               <div></div>
-              <picture>></picture>
-              <h1>Reviewer name</h1>
-              <p>ycomment</p>
-            </article>
-                  <article>
-              <div></div>
-              <picture>></picture>
+              <picture></picture>
               <h1>Reviewer name</h1>
               <p>ycomment</p>
             </article>
