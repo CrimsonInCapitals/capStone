@@ -18,7 +18,6 @@ function App() {
           </menu>
         </nav>
       </header>
-    
       <main>
         <section role='hero'>
             <title>Little Lemon</title>
