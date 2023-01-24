@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Section from './components/section';
 function App() {
   return (
     <>
@@ -10,7 +9,7 @@ function App() {
           </picture>
           <menu>
             <li><a href="#">Home</a></li>
-            <li><a >About</a></li>
+            <li><a href="#">About</a></li>
             <li><a href="#">Menu</a></li>
             <li><a href="#">Reservations</a></li>
             <li><a href="#">Order online</a></li>
@@ -19,10 +18,11 @@ function App() {
         </nav>
       </header>
       <main>
+        <Section color="blue">hello</Section>
         <section role='hero'>
-            <title>Little Lemon</title>
+            <h1>Little Lemon</h1>
             <h2>Chicago</h2>
-            <p>Lorem impsum</P>
+            <p>Lorem impsum</p>
             <a href='#'>Make Booking</a>
             <picture>
             </picture>
@@ -94,7 +94,7 @@ function App() {
             </article>
         </section>
         <section role='about'>
-           <h1>Lille Lemon</h1>
+           <h1>Litlle Lemon</h1>
            <h2>About</h2>
            <p>text</p>
            <div>
