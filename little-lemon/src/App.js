@@ -6,30 +6,35 @@ import HorizontalScroller from './components/horizontal-scroller';
 import FoodArticle from './components/food-article';
 const specials = [
   {
+    id: 1,
     img: '#',
     name: "foodName",
     price: '£**',
     discription: 'discription'
   },
   {
+    id: 2,
     img: '#',
     name: "foodName",
     price: '£**',
     discription: 'discription'
   },
   {
+    id: 3,
     img: '#',
     name: "foodName",
     price: '£**',
     discription: 'discription'
   },
   {
+    id: 4,
     img: '#',
     name: "foodName",
     price: '£**',
     discription: 'discription'
   },
   {
+    id: 5,
     img: '#',
     name: "foodName",
     price: '£**',
@@ -60,13 +65,14 @@ function App() {
         <Section role='specials'color={'white'}>
             <h1>This Weeks Specials</h1>
             <HorizontalScroller>
-              {specials.map((item) => (<FoodArticle foodItem={item} color={ac1}/>))}
+              {specials.map((item) => (<FoodArticle key={item.id} foodItem={item} color={ac1}/>))}
             </HorizontalScroller>
 
         </Section>
         <Section role='testimonies' color={ac1}>
               <h1>Testimonials</h1>
-                    <article>
+              <HorizontalScroller>
+              <article>
               <div></div>
               <picture></picture>
               <h1>Reviewer name</h1>
@@ -90,6 +96,7 @@ function App() {
               <h1>Reviewer name</h1>
               <p>ycomment</p>
             </article>
+              </HorizontalScroller>
         </Section>
         <Section role='about' color={ac2}>
            <h1>Litlle Lemon</h1>

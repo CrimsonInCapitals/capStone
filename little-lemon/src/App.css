@@ -56,18 +56,19 @@ section{
 }
 section .Hs{
 margin-left: -100px;
-width: calc(100%);
-background-color: #61dafb;
+width: 100vw;
 overflow-x: scroll;
-display: flex;
-gap: 50px;
 }
-section .Hs :first-child{
+section .Hs div{
   margin-left: 100px;
+}
+section .Hs div{
+  width: fit-content;
+  display: flex;
+  gap: 50px;
 }
 article.food{
   width: 320px;
-  background-color: ;
   display: inline;
 }
 footer{ 
