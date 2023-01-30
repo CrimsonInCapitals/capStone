@@ -54,6 +54,22 @@ section{
   margin: 0;
   padding: 100px;
 }
+section .Hs{
+margin-left: -100px;
+width: calc(100%);
+background-color: #61dafb;
+overflow-x: scroll;
+display: flex;
+gap: 50px;
+}
+section .Hs :first-child{
+  margin-left: 100px;
+}
+article.food{
+  width: 320px;
+  background-color: ;
+  display: inline;
+}
 footer{ 
   display: flex;
 }

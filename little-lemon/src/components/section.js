@@ -1,7 +1,7 @@
 
-function Section(color, children) {
+const Section = ({color, children}) =>{
   return (
-    <section Style='background-color: {color}'>
+    <section Style={'background-color:'+ color}>
         {children}
     </section>
 
