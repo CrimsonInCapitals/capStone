@@ -1,16 +1,15 @@
 
-const FoodArticle = ({foodItem,color}) =>{
+const FoodArticle = ({foodItem,color, foodimg}) =>{
     return (
       <article className="food" Style={'background-color:'+ color}>
                 <picture>
-                    <img href={foodItem.img}/>
+                    <img src={foodimg} alt={foodItem.discription}/>
                 </picture>
-                <h1>{foodItem.name}</h1>
-                <dd>
-                <dt>{foodItem.price}</dt>
-                <dt>{foodItem.discription}</dt>
-                </dd>
-                <a href='#'>Order online</a>
+                <details>
+                    <summary>{foodItem.name}</summary>
+                    <p>{foodItem.discription}</p>
+                </details>
+                <a href='../order'>Order online for {foodItem.price}</a>
       </article>
      );
   }

@@ -54,6 +54,16 @@ section{
   margin: 0;
   padding: 100px;
 }
+section.hero{
+  display: flex;
+}
+section.hero div{
+  width: 50%;
+}
+section.hero picture img {
+  display: block;
+  width: 100%;
+}
 section .Hs{
 margin-left: -100px;
 width: 100vw;
@@ -65,12 +75,24 @@ section .Hs div{
 section .Hs div{
   width: fit-content;
   display: flex;
+  align-items: flex-start;
   gap: 50px;
 }
 article.food{
   width: 320px;
   display: inline;
+  border-radius: 8px;
+  overflow: hidden;
+  padding-bottom: 20px;
 }
-footer{ 
+article.food img{
+  width: 100%;
+}
+article.food details{
+  margin: 20px;
+}
+/* article.food a{ }*/
+
+footer{
   display: flex;
 }

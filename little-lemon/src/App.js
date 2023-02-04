@@ -4,46 +4,13 @@ import Menu from './components/menu'
 import Footer from './components/footer';
 import HorizontalScroller from './components/horizontal-scroller';
 import FoodArticle from './components/food-article';
-const specials = [
-  {
-    id: 1,
-    img: '#',
-    name: "foodName",
-    price: '£**',
-    discription: 'discription'
-  },
-  {
-    id: 2,
-    img: '#',
-    name: "foodName",
-    price: '£**',
-    discription: 'discription'
-  },
-  {
-    id: 3,
-    img: '#',
-    name: "foodName",
-    price: '£**',
-    discription: 'discription'
-  },
-  {
-    id: 4,
-    img: '#',
-    name: "foodName",
-    price: '£**',
-    discription: 'discription'
-  },
-  {
-    id: 5,
-    img: '#',
-    name: "foodName",
-    price: '£**',
-    discription: 'discription'
-  }
-];
+import { SpecialsProvider } from './context/specials';
+import SpecialsSection from './components/specials-section';
+import HeroSection from './components/hero-section';
+import { pr1,pr2,ac1,ac2 } from './components/colors';
+
 function App() {
-  const [pr1,pr2,se1,se2,ac1,ac2] =['#495E57', '#F4CE14','#EE9972','#FBDABB','#EDEFEE','#333333'];
-  return (
+   return (
     <>
     <Menu color={ac1}>
       <li><a href="#">Home</a></li>
@@ -54,21 +21,10 @@ function App() {
       <li><a href="#">Log In</a></li>
     </Menu>
       <main>
-        <Section role='hero' color={pr1}>
-            <h1>Little Lemon</h1>
-            <h2>Chicago</h2>
-            <p>Lorem impsum</p>
-            <a href='#'>Make Booking</a>
-            <picture>
-            </picture>
-        </Section>
-        <Section role='specials'color={'white'}>
-            <h1>This Weeks Specials</h1>
-            <HorizontalScroller>
-              {specials.map((item) => (<FoodArticle key={item.id} foodItem={item} color={ac1}/>))}
-            </HorizontalScroller>
-
-        </Section>
+        <HeroSection color={pr1}/>
+        <SpecialsProvider>
+          <SpecialsSection color={'white'}/>
+        </SpecialsProvider>
         <Section role='testimonies' color={ac1}>
               <h1>Testimonials</h1>
               <HorizontalScroller>

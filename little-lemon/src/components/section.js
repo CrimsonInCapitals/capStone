@@ -1,7 +1,7 @@
 
-const Section = ({color, children}) =>{
+const Section = ({color, children,className}) =>{
   return (
-    <section Style={'background-color:'+ color}>
+    <section className={className} Style={'background-color:'+ color}>
         {children}
     </section>
 
