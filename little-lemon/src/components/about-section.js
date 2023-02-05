@@ -1,9 +1,9 @@
 import Section from "./section";
 import { pr1 } from "./colors";
 
-const HeroSection = ({color}) =>{
+const AboutSection = ({color}) =>{
     return (
-        <Section className='hero' role='hero' color={pr1}>
+        <Section className='about' role='hero' color={pr1}>
             <main>
                 <div>
                     <h1>Little Lemon</h1>
@@ -12,10 +12,15 @@ const HeroSection = ({color}) =>{
                 </div>
                 <a href='#'>Make Booking</a>
             </main>
+            <aside>
             <picture>
                 <img src={require('../img/4 (42).jpg')} alt='the little lemon resturant from outside'/>
             </picture>
+            <picture>
+                <img src={require('../img/4 (42).jpg')} alt='co owners mike and rob'/>
+            </picture>
+            </aside>
         </Section>
      );
   }
-  export default HeroSection;
+  export default AboutSection;

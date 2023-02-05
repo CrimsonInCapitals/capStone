@@ -43,6 +43,7 @@ header{
   justify-content: space-between;
   padding: 50px,10%;
   position: fixed;
+  box-sizing: content-box;
 }
 header menu{
   display: flex;
@@ -54,23 +55,31 @@ section{
   margin: 0;
   padding: 100px;
 }
-section.hero{
+section.hero, section.about{
   display: flex;
 }
-section.hero div{
+section main{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+section.hero picture{
   width: 50%;
 }
-section.hero picture img {
+section picture img {
   display: block;
   width: 100%;
+  border-radius: 8px;
 }
 section .Hs{
-margin-left: -100px;
-width: 100vw;
+margin: 0 -100px;
+width: inherit;
 overflow-x: scroll;
 }
-section .Hs div{
-  margin-left: 100px;
+section .Hs>div{
+  margin: 0 100px;
+  box-sizing: content-box;
 }
 section .Hs div{
   width: fit-content;
@@ -95,4 +104,56 @@ article.food details{
 
 footer{
   display: flex;
+}
+
+article.review{
+  width: 320px;
+  border-radius: 8px;
+  padding: 20px;
+
+}
+article.review picture{
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  display: inline;
+}
+article.food picture{
+  height: 320px;
+}
+article.food summary{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+article.food img{
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+
+article.review img{
+  width: inherit;
+  border-radius: 50%;
+  height: inherit;
+  object-fit: cover;
+}
+article.review div{
+  display: flex;
+  gap: 15px;
+  justify-content: flex-start;
+  align-items: center;
+}
+section aside{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+section aside picture{
+  width: 80%;
+}
+section aside picture:first-child {
+  margin-left: 20%;
+  margin-bottom: -60%;
 }
