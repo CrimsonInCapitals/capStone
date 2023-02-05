@@ -57,9 +57,10 @@ section{
 }
 section.hero, section.about{
   display: flex;
+  gap: 20%;
 }
 section main{
-  width: 50%;
+  width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

@@ -8,7 +8,7 @@ const AboutSection = ({color}) =>{
                 <div>
                     <h1>Little Lemon</h1>
                     <h2>Chicago</h2>
-                    <p>Lorem impsum</p>
+                    <p>When we first opened our doors in 1987 under the caring manaagment of Gino, our current owners grandfather, we were located a few doors down on the other side of the road. where the nail salon currently is. After amazing feedback and a growing customer base we moved here. The bigger space and outdoor area allowed use to deliver a truely primo service. Now as we look to the future and exciting growth is on it's way and we look forward to sharing that with you soon</p>
                 </div>
                 <a href='#'>Make Booking</a>
             </main>
