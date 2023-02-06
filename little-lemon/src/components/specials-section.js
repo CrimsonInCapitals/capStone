@@ -7,7 +7,7 @@ const SpecialsSection = ({color}) =>{
     const specials = useSpecialsContext();
     return (
       <Section color={color}>
-        <h1>This Weeks Specials</h1>
+        <h2>This Weeks Specials</h2>
         <HorizontalScroller>
             {specials.map((item) => (<FoodArticle key={item.id} foodItem={item} foodimg={item.getImageSrc()} color={ac1}/>))}
         </HorizontalScroller>

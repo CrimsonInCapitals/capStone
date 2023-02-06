@@ -15,18 +15,22 @@ const Footer = ({color, children}) =>{
             <li><a href="#">Log In</a></li>
           </menu>
         </nav>
+        <div>
            <h1>Contact Us</h1>
           <menu>
             <li><a href="#">Email</a></li>
             <li><a href="#">Phone</a></li>
             <li><a href="#">Address</a></li>
           </menu>
+        </div>
+        <div>
            <h1>Social Media</h1>
           <menu>
             <li><a href="#">Facebook</a></li>
             <li><a href="#">Instagram</a></li>
             <li><a href="#">Tiktok</a></li>
           </menu>
+          </div>
       </footer>
      );
   }

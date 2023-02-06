@@ -7,7 +7,7 @@ const ReviewsSection = ({color}) =>{
     const reviews = useReviewsContext();
     return (
       <Section color={color}>
-        <h1>Reviews</h1>
+        <h2>Reviews</h2>
         <HorizontalScroller>
             {reviews.map((item) => (<ReviewArticle key={item.id} Review={item} personimg={item.getImageSrc()} color={ac1}/>))}
         </HorizontalScroller>

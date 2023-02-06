@@ -20,24 +20,24 @@ export const SpecialsProvider = ({ children }) => {
     },
     {
       id: 3,
-      getImageSrc: () => require("../img/4 (42).jpg"),
-      name: "foodName",
-      price: '£**',
-      discription: 'discription'
+      getImageSrc: () => require("../img/cheesefon.jpg"),
+      name: "NEW CHEESE FONDUE",
+      price: '£7.50',
+      discription: 'Rich cheese fondue of aged hard cheese, mascarpone and mozzarella, served with warm dough bites, perfect for dipping.'
     },
     {
       id: 4,
-      getImageSrc: () => require("../img/4 (42).jpg"),
-      name: "foodName",
-      price: '£**',
-      discription: 'discription'
+      getImageSrc: () => require("../img/pollo.png"),
+      name: "POLLO E ROQUITO PEPEe",
+      price: '£16.75',
+      discription: 'Garlic chicken breast, Roquito pepper pearls, balsamic onions, crispy smoked prosciutto, mozzarella and rocket on a tomato base.'
     },
     {
       id: 5,
-      getImageSrc: () => require("../img/4 (42).jpg"),
-      name: "foodName",
-      price: '£**',
-      discription: 'discription'
+      getImageSrc: () => require("../img/asparigus.jpg"),
+      name: "ASPARAGUS & PANCETTA CARBONARA FRILLY TAGLIATELLE",
+      price: '£16.25',
+      discription: 'Crispy pancetta and asparagus in a velvety mascarpone and cheese sauce, topped with crispy smoked prosciutto.'
     }
 ])
 

@@ -1,46 +1,73 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: sepim;
+  src: url(./font/Semplicita\ Medium.otf);
+  font-weight:Medium;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: sepib;
+  src: url(./font/Semplicita\ Bold.otf);
+  font-weight: bold;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: sepil;
+  src: url(./font/Semplicita\ Light.otf);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+h1{
+  font-family: sepim;
+  font-size: 3rem;
+  margin: 0;
+  color: #f4ce14;
+}
+h2{
+  font-family: sepib;
+  font-size: 1.5rem;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+h3{
+  font-family: sepim;
+  font-size: 2rem;
+}
+p{
+  font-family: sepil;
+  font-size: 1.5rem;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+ul{
+  list-style-type: none;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+menu{
+  list-style-type: none;
+}
+menu a{
+  background-color: inherit;
+  font-size: 1.2rem;
+  padding: 0;
+  font-family: sepib;
+}
+menu a:hover{
+  color: #f4ce14;
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+article p{
+  font-size: 1rem;
+  color: #495e57;
+}
+section h2{
+  color: #495e57;
+}
+section.hero h2,section.about h2{
+  color: white;
 }
 header{
   width: 100%;
   background-color: wheat;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 50px,10%;
   position: fixed;
   box-sizing: content-box;
@@ -49,6 +76,20 @@ header menu{
   display: flex;
   gap: 25px;
   justify-content: flex-end;
+}
+a{
+  padding: 1rem 3rem;
+  background-color: #f4ce14;
+  color: #495e57;
+  font-family: sepim;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 8px;
+}
+article a{
+  background-color: inherit;
+  padding: 20px;
+  text-decoration: underline;
 }
 section{
   background-color: tan;
@@ -72,11 +113,17 @@ section picture img {
   display: block;
   width: 100%;
   border-radius: 8px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
 }
 section .Hs{
 margin: 0 -100px;
 width: inherit;
 overflow-x: scroll;
+scrollbar-width: 0;
+}
+section .Hs::-webkit-scrollbar{
+  width: 0;
 }
 section .Hs>div{
   margin: 0 100px;
@@ -97,6 +144,8 @@ article.food{
 }
 article.food img{
   width: 100%;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 article.food details{
   margin: 20px;
@@ -105,6 +154,9 @@ article.food details{
 
 footer{
   display: flex;
+  gap: 50px;
+  justify-content: baseline;
+  padding: 20px 100px;
 }
 
 article.review{
@@ -112,6 +164,30 @@ article.review{
   border-radius: 8px;
   padding: 20px;
 
+}
+summary{
+  font-family: sepim;
+  font-size: 1.5rem;
+  color: #495e57;
+}
+
+.review h4{
+  font-size: 50px;
+  color: #f4ce14;
+  width: fill;
+  text-align: center;
+  margin: 0;
+}
+.review summary{
+  font-size: 1rem;
+  width: fill;
+  text-align: center;
+}
+.review>p{
+  margin: 0;
+  width: fill;
+  text-align: center;
+  color: #495e5773;
 }
 article.review picture{
   border-radius: 50%;
@@ -153,8 +229,24 @@ section aside{
 }
 section aside picture{
   width: 80%;
+  aspect-ratio: 1/1;
 }
 section aside picture:first-child {
   margin-left: 20%;
   margin-bottom: -60%;
+}
+footer div, footer nav{
+display: flex;
+flex-direction: column;
+align-items: baseline;
+}
+footer h1{
+  color: #495e57;
+  font-size: 1.8rem;
+}
+footer menu{
+  padding: 0;
+}
+footer menu a{
+  font-family: sepim;
 }

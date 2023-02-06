@@ -14,10 +14,10 @@ const AboutSection = ({color}) =>{
             </main>
             <aside>
             <picture>
-                <img src={require('../img/4 (42).jpg')} alt='the little lemon resturant from outside'/>
+                <img src={require('../img/inside.jpg')} alt='the little lemon resturant from outside'/>
             </picture>
             <picture>
-                <img src={require('../img/4 (42).jpg')} alt='co owners mike and rob'/>
+                <img src={require('../img/Matt.jpg')} alt='co owners mike and rob'/>
             </picture>
             </aside>
         </Section>

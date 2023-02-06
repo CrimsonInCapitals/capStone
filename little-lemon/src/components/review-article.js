@@ -2,7 +2,7 @@
 const ReviewArticle = ({Review,color, personimg}) =>{
     var rating = ''
     for(let i = 0; i < Review.rating; i++){
-        rating = rating + '*'
+        rating = rating + '★ '
     }
     return (
       <article className="review" Style={'background-color:'+ color}>
@@ -12,7 +12,8 @@ const ReviewArticle = ({Review,color, personimg}) =>{
                 </picture>
                 <h3>{Review.name}</h3>
                 </div>
-                {Review.comment? <details><summary>{rating}</summary><p>{Review.comment}</p></details>: rating}
+                <h4>{rating}</h4>
+                {Review.comment ? <details><summary>View comment</summary><p>{Review.comment}</p></details>: <p>No Comment</p>}
       </article>
      );
   }
