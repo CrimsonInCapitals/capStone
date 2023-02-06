@@ -8,20 +8,24 @@ import AboutSection from './components/about-section';
 import Footer from './components/footer';
 import { SpecialsProvider } from './context/specials';
 import { ReviewsProvider } from './context/reviews';
+import {Link,Routes,Route} from 'react-router-dom'
 
 function App() {
    return (
     <>
     <Menu color={ac1}>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Menu</a></li>
-      <li><a href="#">Reservations</a></li>
-      <li><a href="#">Order online</a></li>
-      <li><a href="#">Log In</a></li>
+      <li><Link to='/' href="#">Home</Link></li>
+      <li><Link to='/' href="#">About</Link></li>
+      <li><Link to='/' href="#">Menu</Link></li>
+      <li><Link to='/' href="#">Reservations</Link></li>
+      <li><Link to='/' href="#">Order online</Link></li>
+      <li><Link to='/' href="#">Log In</Link></li>
     </Menu>
 
       <main>
+        <Routes>
+          
+        </Routes>
         <HeroSection color={pr1}/>
         <SpecialsProvider>
           <SpecialsSection color={'white'}/>
