@@ -1,5 +1,5 @@
 
-const Menu = ({color, children}) =>{
+const Header = ({color, children}) =>{
     return (
       <header Style={'background-color:'+ color}>
             <nav>
@@ -14,4 +14,4 @@ const Menu = ({color, children}) =>{
      );
   }
 
-  export default Menu;
+  export default Header;

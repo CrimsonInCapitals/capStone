@@ -10,13 +10,9 @@ import { ReviewsProvider } from './context/reviews';
 function Home() {
    return (
     <>
-        <HeroSection color={pr1}/>
-        <SpecialsProvider>
-        <SpecialsSection color={'white'}/>
-        </SpecialsProvider>
-        <ReviewsProvider>
-        <ReviewsSection/>
-        </ReviewsProvider>
+        <HeroSection/>
+        <SpecialsProvider><SpecialsSection/></SpecialsProvider>
+        <ReviewsProvider><ReviewsSection/></ReviewsProvider>
         <AboutSection/>
     </>
   );

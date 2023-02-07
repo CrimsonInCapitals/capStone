@@ -6,7 +6,7 @@ import { ac1 } from "./colors";
 const SpecialsSection = ({color}) =>{
     const specials = useSpecialsContext();
     return (
-      <Section color={color}>
+      <Section color={'white'}>
         <h2>This Weeks Specials</h2>
         <HorizontalScroller>
             {specials.map((item) => (<FoodArticle key={item.id} foodItem={item} foodimg={item.getImageSrc()} color={ac1}/>))}
