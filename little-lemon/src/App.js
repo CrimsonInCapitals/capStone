@@ -8,31 +8,32 @@ import AboutSection from './components/about-section';
 import Footer from './components/footer';
 import { SpecialsProvider } from './context/specials';
 import { ReviewsProvider } from './context/reviews';
-// import {Link,Routes,Route} from 'react-router-dom'
+import {Link,Routes,Route} from 'react-router-dom'
+import Home from './home';
 
 function App() {
    return (
     <>
     <Menu color={ac1}>
-      <li><a to='/' href="#">Home</a></li>
-      <li><a to='/' href="#">About</a></li>
-      <li><a to='/' href="#">Menu</a></li>
-      <li><a to='/' href="#">Reservations</a></li>
-      <li><a to='/' href="#">Order online</a></li>
-      <li><a to='/' href="#">Log In</a></li>
+      <li><Link to='/' >Home</Link></li>
+      <li><Link to='/about' >About</Link></li>
+      <li><Link to='/menu' >Menu</Link></li>
+      <li><Link to='/bookings' >Reservations</Link></li>
+      <li><Link to='/order' >Order online</Link></li>
+      <li><Link to='/log-in' >Log In</Link></li>
     </Menu>
+    <main>
+    <Routes>
+      <Route path='/' element={<Home/>}></Route>
+      <Route path='/about' element={<Home/>}></Route>
+      <Route path='/menu' element={<Home/>}></Route>
+      <Route path='/bookings' element={<Home/>}></Route>
+      <Route path='/order' element={<Home/>}></Route>
+      <Route path='/log-in' element={<Home/>}></Route>
+    </Routes>
+    </main>
 
-      <main>
-        <HeroSection color={pr1}/>
-        <SpecialsProvider>
-          <SpecialsSection color={'white'}/>
-        </SpecialsProvider>
-        <ReviewsProvider>
-          <ReviewsSection/>
-        </ReviewsProvider>
-        <AboutSection/>
-      </main>
-      <Footer color={pr2}/>
+    <Footer color={pr2}/>
     </>
   );
 }
