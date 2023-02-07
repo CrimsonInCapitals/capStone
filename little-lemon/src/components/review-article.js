@@ -13,7 +13,7 @@ const ReviewArticle = ({Review,color, personimg}) =>{
                 <h3>{Review.name}</h3>
                 </div>
                 <h4>{rating}</h4>
-                {Review.comment ? <details><summary>View comment</summary><p>{Review.comment}</p></details>: <p>No Comment</p>}
+                {Review.comment ? <details><summary>View Comment</summary><p>{Review.comment}</p></details>: <p>No Comment</p>}
       </article>
      );
   }
