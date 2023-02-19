@@ -1,7 +1,7 @@
 
 const FoodArticle = ({foodItem,color, foodimg}) =>{
     return (
-      <article className="food" Style={'background-color:'+ color}>
+      <article className="food" style={{backgroundColor: color}}>
                 <picture>
                     <img src={foodimg} alt={foodItem.discription}/>
                 </picture>

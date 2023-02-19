@@ -1,7 +1,7 @@
 
 const Section = ({color, children,className}) =>{
   return (
-    <section className={className} Style={'background-color:'+ color}>
+    <section className={className} style={{backgroundColor: color}}>
         {children}
     </section>
 

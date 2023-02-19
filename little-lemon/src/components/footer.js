@@ -1,11 +1,11 @@
 
 const Footer = ({color, children}) =>{
     return (
-      <footer Style={'background-color:'+ color}>
+      <footer style={{backgroundColor: color}}>
               <picture>
           </picture>
           <nav>
-          <h1>menu</h1>
+          <h1>Site Map</h1>
           <menu>
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>

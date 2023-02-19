@@ -63,6 +63,13 @@ section h2{
 section.hero h2,section.about h2{
   color: white;
 }
+section.menu{
+  padding-top: 50px;
+  padding-bottom: 0px;
+}
+section.menu:last-child{
+  padding-bottom: 50px;
+}
 header{
   width: 100%;
   background-color: wheat;
@@ -249,4 +256,26 @@ footer menu{
 }
 footer menu a{
   font-family: sepim;
+}
+section.booking{
+  height: 100vh;
+  box-sizing: content-box;
+  padding: 10%;
+  display: flex;
+}
+section.booking div, section.booking form{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 20px;
+}
+section.booking form{
+  width: 100%;
+}
+section.booking picture{
+  width: 50%;
+}
+button.booking{
+  height: 3em;
+  font-size: 2em;
 }

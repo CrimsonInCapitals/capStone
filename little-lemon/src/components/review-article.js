@@ -5,7 +5,7 @@ const ReviewArticle = ({Review,color, personimg}) =>{
         rating = rating + '★ '
     }
     return (
-      <article className="review" Style={'background-color:'+ color}>
+      <article className="review" style={{backgroundColor: color}}>
                 <div>
                 <picture>
                     <img src={personimg} alt={Review.name}/>

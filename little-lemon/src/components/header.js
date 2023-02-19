@@ -1,9 +1,9 @@
 const Header = ({color, children}) =>{
     return (
-      <header Style={'background-color:'+ color}>
+      <header style={{backgroundColor: color}}>
             <nav>
                 <picture>
-                    <svg src='../../img/logo-a.svg' alt='a little lemon'></svg>
+                    {/* <svg src='../../img/logo-a.svg' alt='a little lemon'></svg> */}
                 </picture>
                 <menu>
                     {children}
