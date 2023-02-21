@@ -65,10 +65,10 @@ const BookingForm =()=> {
       <>
          <Section className='booking' color={ac1}>
             <picture>
-               <img src={require("../img/gb.jpg")} alt="booking stage"/>
+               <img src={require("../img/reserve.png")} alt="booking stage"/>
             </picture>
             <div>
-         {!isLoading && response && response.message && <h2>{response.message}</h2>}
+         {!isLoading && response && response.message && <h2 className={response.messagetype && response.messagetype}>{response.message}</h2>}
          {isLoading && stage === 1 &&
             <h2>checking avalibility</h2>
          }{isLoading && stage === 2 &&
@@ -84,19 +84,21 @@ const BookingForm =()=> {
                     </label>
                     <label>
                        Select a time:
+                       <div className="time">
                        <select name="hour" value={variables.hour} onChange={e =>{setVariables({...variables, hour: e.target.value});updateMinute(e.target.value)}}>
                            {hoursRange.map((number)=> (<option key={number}>{number}</option>))}
                        </select>:
                        <select name="minute" value={variables.minute} onChange={e=>setVariables({...variables, minute:e.target.value})}>
                         {minuteRange.map((number)=>(<option key={number}>{number === 0? '00': number}</option>))}
                        </select>
+                       </div>
                     </label>
                     <label>
                          Group size:
                          <input name='quests' type='number' value={variables.guests} onChange={e=>setVariables({...variables,guests:e.target.value})}/>
                     </label>
                     <button className="booking" type='submit'>Check avalibility</button>
-                    <button className="booking" onClick={ClearVariables} type="button">Clear</button>
+                    <button className="booking second" onClick={ClearVariables} type="button">Clear</button>
                  </form>
          }{!isLoading && stage === 2 &&
             <form onSubmit={e=>HandleSubmit(e,info)}>
@@ -122,8 +124,8 @@ const BookingForm =()=> {
               <input type='text' value={info.otherOccassion} onChange={e=>setInfo({...info, otherOccassion: e.target.value})}/>
             </label>}
             <button className="booking" type='submit'>Reserve table</button>
-            <button className="booking" type="button" onClick={ClearInfo}>Clear</button>
-            <button className="booking" type="button" onClick={e=>{setStage(0);submit('/',variables,0,setStage)}}>Go back</button>
+            <button className="booking second" type="button" onClick={ClearInfo}>Clear</button>
+            <button className="booking second" type="button" onClick={e=>{setStage(0);submit('/',variables,0,setStage)}}>Go back</button>
          </form>
          }{!isLoading && stage === 3 &&
             <h2>Your booking has been made. We'll see you on {days[new Date(variables.date).getDay()]} the {dates[new Date(variables.date).getDate()]} of {months[new Date(variables.date).getMonth()]}</h2>

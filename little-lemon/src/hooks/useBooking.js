@@ -27,25 +27,25 @@ const useBooking = () => {
         await wait(2000);
         if(date>data.data){throw new Error('The selected date has passed')}
         if(date===data.date){
-          if(hour>data.hour){throw new Error('the selected time has passed (hour)')}
+          if(hour>data.hour){throw new Error('The selected time has passed (hour)')}
           if(hour===data.hour && minute> data.minute){throw new Error('The selected time has passed (minuter)')}
           if(hour===data.hour || (hour+1=== data.hour && minute < data.minute)){throw new Error('You cant book for less than an hours time')}
         }
-        if(data.guests <1){throw new Error('Must be atleast one Guest')}
+        if(data.guests <1){throw new Error('Must be at least one Guest')}
         if(data.guests > 10){throw new Error('For prarts over 10 a booking must be made over the phone or in perosn')}
         if(random<0.2){throw new Error('Stage one failed')}
-        setResponse({avalible:true,message:'We have a table. please enter your details to reserve '})
+        setResponse({avalible:true,message:'We have a table. please enter your details to reserve ',messagetype: 'sucess'})
         setVariables(data)
         setStage(2)
 
 
-      }catch(error){setResponse({message: error.message,avalible:false})}
+      }catch(error){setResponse({message: error.message,messagetype: 'error',avalible:false})}
       finally{setLoading(false)}
     }else if(stage === 2){
       try {
         await wait(2000);
         if(data.name === ''){throw new Error('Name is required')}
-        if(data.email === '' || emailregex.test(data.email)){throw new Error('invalid email')}
+        if(data.email === '' || emailregex.test(data.email)){throw new Error('Invalid email')}
         if (random < 0.2) {throw new Error("Something went wrong");}
         console.log(variables,data)
         setResponse({booked:true})
@@ -54,7 +54,8 @@ const useBooking = () => {
       console.log(error.message)
       setResponse({
         booked: false,
-        message: error.message
+        message: error.message,
+        messagetype: 'error'
       })
     } finally {
       setLoading(false);

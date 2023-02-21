@@ -258,7 +258,6 @@ footer menu a{
   font-family: sepim;
 }
 section.booking{
-  height: 100vh;
   box-sizing: content-box;
   padding: 10%;
   display: flex;
@@ -266,16 +265,81 @@ section.booking{
 section.booking div, section.booking form{
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 50%;
   gap: 20px;
 }
 section.booking form{
   width: 100%;
+  font-size: 1.2rem;
+}
+section.booking button.second{
+  background-color: white;
+  color: #495e57;
 }
 section.booking picture{
   width: 50%;
 }
 button.booking{
-  height: 3em;
-  font-size: 2em;
+      padding: 1rem;
+      font-size: 1.8rem;
+      border-radius: 8px;
+      border: none;
+      background-color: #495e57;
+      color: white;
+      font-family: 'sepim';
+}.booking h2{
+    padding: 1rem 40px;
+    /* background-color: #495e57; */
+    border-radius: 8px;
+    /* color: white; */
+    text-align: center;
+    font-size: 1rem;
+}
+.booking h2.error{
+  background-color: #e64040;
+  color: white;
+}
+select {
+  /* A reset of styles, including removing the default dropdown arrow */
+  appearance: none;
+   /* Additional resets for further consistency */
+  background-color: transparent;
+  border: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+}
+form div.time{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+  background-color: white;
+  border-radius: 8px;
+  width: fit-content;
+  font-family: 'sepim';
+}
+form label{
+  display: flex;
+  font-family: 'sepim';
+  align-items: center;
+  gap: 20px;
+}
+.time select{
+  width: fit-content;
+  padding: 10px 20px;
+  font-family: 'sepim';
+}
+input{
+  padding: 10px 30px;
+  font-size: 1.2rem;
+  font-family: 'sepim';
+  border-radius: 8px;
+  border: none;
 }
