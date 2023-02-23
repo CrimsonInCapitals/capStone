@@ -24,7 +24,6 @@ const useBooking = () => {
       setVariables(data)
 
       try{
-        await wait(2000);
         if(date>data.data){throw new Error('The selected date has passed')}
         if(date===data.date){
           if(hour>data.hour){throw new Error('The selected time has passed (hour)')}
@@ -34,6 +33,7 @@ const useBooking = () => {
         if(data.guests <1){throw new Error('Must be at least one Guest')}
         if(data.guests > 10){throw new Error('For prarts over 10 a booking must be made over the phone or in perosn')}
         if(random<0.2){throw new Error('Stage one failed')}
+        await wait(2000);
         setResponse({avalible:true,message:'We have a table. please enter your details to reserve ',messagetype: 'sucess'})
         setVariables(data)
         setStage(2)
@@ -43,10 +43,10 @@ const useBooking = () => {
       finally{setLoading(false)}
     }else if(stage === 2){
       try {
-        await wait(2000);
         if(data.name === ''){throw new Error('Name is required')}
         if(data.email === '' || emailregex.test(data.email)){throw new Error('Invalid email')}
         if (random < 0.2) {throw new Error("Something went wrong");}
+        await wait(2000);
         console.log(variables,data)
         setResponse({booked:true})
         setStage(3)
