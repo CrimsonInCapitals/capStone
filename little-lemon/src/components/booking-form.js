@@ -1,9 +1,13 @@
 import Section from "./section";
+import React from "react";
 import {useEffect, useReducer, useState} from 'react'
 import { useHoursContext } from "../context/hours";
 import useBooking from "../hooks/useBooking";
 import {ac1,ac2,pr1,pr2} from '../components/colors'
-const BookingForm =()=> {
+//import {fetchAPI, submitAPI} from 'https://raw.githubusercontent.com/Meta-Front-End-Developer-PC/capstone/master/api.js'
+const BookingForm =()=>
+
+{
    const days = ['Sunday','Monday','Tuesday','Wednesday','Thurday','Friday','Saturday']
    const dates = ['0th','1st','2nd','3rd','4th','5th','6th','7th','8th','9th','10th','11th','12th','13th','14th','15th','16th','17th','18th','19th','20th','21st','22nd','23rd','24th','25th','26th','27th','28th','29th','30th','31st']
    const months = ['January','Febuary','March','April','May','June','July','August','September','October','November','December']
@@ -13,6 +17,19 @@ const BookingForm =()=> {
    const [hoursRange,setHoursRange]= useState([11,12,13,14,15,16,17,18,19,20]);
    const [minuteRange,setMinuteRange]= useState([0,15,30,45])
 
+   const updateTimes = (variable,action)=>{
+      return fetchAPI(action.date)
+      console.log(window.fetchAPI(action.date))
+      //window.fetchData()
+      return [12,13,14,15,16,17,18,19]
+   }
+   useEffect(()=>{
+     // fetch('https://raw.githubusercontent.com/Meta-Front-End-Developer-PC/capstone/master/api.js')
+      //.then((response)=> response.json)
+     // .then((jsonData)=> console.log(jsonData.))
+   },[])
+   const initialTimes = [12,13,14,15,16,17,18,19]
+   const [avalibleTimes,dispatchAvalibleTimes] = useReducer(updateTimes,initialTimes)
 
    const HandleSubmit = (e,date) => {
       e.preventDefault()
@@ -73,6 +90,7 @@ const BookingForm =()=> {
                <img src={require("../img/reserve.png")} alt="booking stage"/>
             </picture>
             <div className="formcontainer">
+             <div className="flex">  {avalibleTimes.map((time)=>(<h2 id={time}>{time}</h2>))}</div>
          {!isLoading && response && response.message && <h2 className={response.messagetype && response.messagetype}>{response.message}</h2>}
          {isLoading && stage === 1 &&
             <h2>checking avalibility</h2>
@@ -85,7 +103,7 @@ const BookingForm =()=> {
                     <form onSubmit={e=>HandleSubmit(e,variables)}>
                       <label>
                      Select a date:
-                    <input name='date'type='date' value={variables.date} onChange={e=>{setVariables(e);updateHours(e.target.value)}}/>
+                    <input name='date'type='date' value={variables.date} onChange={e=>{setVariables(e);dispatchAvalibleTimes({date: e.target.value});updateHours(e.target.value)}}/>
                     </label>
                     <label>
                        Select a time:

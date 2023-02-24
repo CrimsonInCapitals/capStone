@@ -22,13 +22,13 @@ export const HoursProvider = ({ children }) => {
         }
     }
   const [hours] = useState([
-    new weekend('12:30','20:30'),
-    new weekday(),
+    new weekend('12:30','20:30'),//sunday
+    new weekday(),//monday
     new weekday(),
     new weekday(),
     new weekday(),
     new weekday('11:30','21:30'),
-    new weekend()
+    new weekend()//saturday
 ])
 
 // console.log(hours)
